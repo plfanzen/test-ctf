@@ -1,0 +1,19 @@
+services:
+    main:
+        build:
+            context: src
+            dockerfile: Dockerfile
+        ports:
+            - port: 8080
+              protocol: tcp # Alternatively, http is supported
+        environment:
+            FAKEFLAG: "{{ genFakeFlag() }}"
+            FLAG: {{ flag }}
+
+metadata:
+    title: "Hello World Challenge"
+    description: |
+        A simple hello world challenge to get you started.
+    difficulty: "easy"
+    base_points: 100
+    category: "intro"
