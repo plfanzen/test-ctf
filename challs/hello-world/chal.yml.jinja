@@ -9,6 +9,15 @@ services:
         environment:
             FAKEFLAG: "{{ genFakeFlag() }}"
             FLAG: {{ flag }}
+        mounts:
+            data:
+                data/subdir: /data
+            tmp_dirs:
+                - /test-tmp
+
+volumes:
+    data:
+        size: 50MiB
 
 metadata:
     title: "Hello World Challenge"

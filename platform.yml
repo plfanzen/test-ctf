@@ -3,6 +3,7 @@ version: 1
 name: Plfanzen DemoCTF
 start: 2025-11-13T10:00:00Z
 end: 2025-11-20T10:00:00Z
+enable_teams: false
 
 categories:
   intro:
