@@ -1,0 +1,25 @@
+event_name: Plfanzen DemoCTF
+front_page_md: |
+  # Plfanzen CTF
+
+  This is a CTF.
+rules_md: |
+  # Plfanzen CTF - Rules
+
+  Don't play - This is a test
+
+start_time: 2025-11-13T10:00:00Z
+end_time: 2026-11-20T10:00:00Z
+use_teams: false
+#registration_start_time: 2025-11-13T10:00:00Z
+#registration_end_time: 2026-11-20T10:00:00Z
+
+calculate_points_fn: |
+    // I didn't want to make up a scoring formula, so this has been written by Copilot.
+    function calculateScore(challengeMetadata, totalSolves) {
+        const minPoints = 10;
+        const maxPoints = 500;
+        const decayFactor = Math.log10(totalSolves + 1); // +1 to avoid log10(0)
+        const score = Math.max(minPoints, maxPoints - decayFactor * (maxPoints - minPoints) / 10);
+        return Math.floor(score);
+    }
