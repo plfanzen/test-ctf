@@ -3,9 +3,10 @@ services:
         build:
             context: src
             dockerfile: Dockerfile
+        image: traefik/whoami
         ports:
-            - port: 8080
-              protocol: tcp # Alternatively, http is supported
+            - port: 80
+              protocol: http # Alternatively, http is supported
         environment:
             FAKEFLAG: "{{ genFakeFlag() }}"
             FLAG: "PLFANZEN{TEST}"
