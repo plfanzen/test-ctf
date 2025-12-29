@@ -8,7 +8,8 @@ services:
               protocol: tcp # Alternatively, http is supported
         environment:
             FAKEFLAG: "{{ genFakeFlag() }}"
-            FLAG: {{ flag }}
+            FLAG: "PLFANZEN{TEST}"
+            ACTOR: {{ actor }}
         mounts:
             data:
                 data/subdir: /data
