@@ -14,12 +14,32 @@ use_teams: false
 #registration_start_time: 2025-11-13T10:00:00Z
 #registration_end_time: 2026-11-20T10:00:00Z
 
-calculate_points_fn: |
-    // I didn't want to make up a scoring formula, so this has been written by Copilot.
-    function calculateScore(challengeMetadata, totalSolves) {
+points_fn: |
+    setPointsFn((challengeMetadata, totalSolves, currentSolveIndex) => {
+        // Ignore solveIndex
         const minPoints = 10;
         const maxPoints = 500;
         const decayFactor = Math.log10(totalSolves + 1); // +1 to avoid log10(0)
         const score = Math.max(minPoints, maxPoints - decayFactor * (maxPoints - minPoints) / 10);
         return Math.floor(score);
-    }
+    })
+
+categories:
+  misc:
+    name: msic
+    description: "**various challenges** for you to solve"
+    color: "#800080"
+  pwn:
+    name: pwn
+    color: green
+
+
+difficulties:
+  easy:
+    name: easy
+  medium:
+    name: medium
+  hard:
+    name: hard
+  extreme:
+    name: '"easy"'
