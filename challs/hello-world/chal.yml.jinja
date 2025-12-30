@@ -33,4 +33,7 @@ metadata:
     authors:
         - Aaron
         - Plfanzen
-    flag: PLFANZEN{TEST}
+    flag_validation_fn: |
+       setFlagValidationFunction((flag) => {
+         return flag.startsWith("PLFANZEN{") && flag.endsWith("}");
+       });
