@@ -6,7 +6,7 @@ services:
         image: traefik/whoami
         external_ports:
             - port: 80
-              protocol: http # Alternatively, tcp is supported
+              protocol: HTTP # Alternatively, TCP is supported
         environment:
             FAKEFLAG: "{{ genFakeFlag() }}"
             FLAG: "PLFANZEN{TEST}"
