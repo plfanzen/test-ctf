@@ -17,3 +17,5 @@ metadata:
         - Aaron
         - Plfanzen
     flag: PLFANZEN{TEST_SVC_2}
+
+volumes: {}
