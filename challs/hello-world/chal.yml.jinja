@@ -37,5 +37,5 @@ metadata:
         - Plfanzen
     flag_validation_fn: |
        setFlagValidationFunction((flag) => {
-         return flag.startsWith("PLFANZEN{") && flag.endsWith("}");
+         return flag.startsWith("PLFANZEN{") && flag.endsWith("}") && flag !== "PLFANZEN{TEST_SVC_2}";
        });
