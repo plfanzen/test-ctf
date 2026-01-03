@@ -1,0 +1,21 @@
+services:
+    main:
+        image: ghcr.io/plfanzen/demo-chal:main
+        ports:
+          - 3000:3000
+
+x-ctf-metadata:
+    name: Socket Test
+    description_md: |
+        Just testing socket stuff.
+    difficulty: "easy"
+    base_points: 100
+    categories:
+        - misc
+    authors:
+        - Aaron
+        - Plfanzen
+    flag: PLFANZEN{TEST_SVC_2}
+    ports:
+        3000:
+            protocol: TCP
