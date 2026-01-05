@@ -5,7 +5,11 @@ services:
             dockerfile: Dockerfile
         image: traefik/whoami
         ports:
-            - 8080:8080
+            - name: web
+                target: 8080
+                published: "8080"
+                protocol: tcp
+                app_protocol: http
         environment:
             FAKEFLAG: "{{ genFakeFlag() }}"
             FLAG: "PLFANZEN{TEST}"
@@ -15,10 +19,7 @@ services:
 
 volumes:
     data:
-
-x-volumes:
-    data:
-        size: 10Mi
+        x-size: 10Mi
 
 x-ctf-metadata:
     name: "Hello World Challenge"
