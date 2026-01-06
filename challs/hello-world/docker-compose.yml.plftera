@@ -11,8 +11,11 @@ services:
               protocol: tcp
               app_protocol: http
         environment:
-            FAKEFLAG: "{{ genFakeFlag() }}"
+            {% if is_export %}
+            FLAG: "{{ genFakeFlag() }}" # Fake flag for example
+            {% else %}
             FLAG: "PLFANZEN{TEST}"
+            {% endif %}
             ACTOR: {{ actor }}
         volumes:
             - data:/data
