@@ -6,10 +6,10 @@ services:
         image: traefik/whoami
         ports:
             - name: web
-                target: 8080
-                published: "8080"
-                protocol: tcp
-                app_protocol: http
+              target: 8080
+              published: "8080"
+              protocol: tcp
+              app_protocol: http
         environment:
             FAKEFLAG: "{{ genFakeFlag() }}"
             FLAG: "PLFANZEN{TEST}"
