@@ -27,7 +27,7 @@ x-ctf-metadata:
         A simple hello world challenge to get you started.
         Visit [this page](https://example.com) to learn more.
 
-        Flag is `PLFANZEN{` + ANYTHING + `}`
+        Flag is `PLFANZY{` + ANYTHING + `}`
     difficulty: "easy"
     base_points: 100
     categories:
@@ -38,8 +38,5 @@ x-ctf-metadata:
     auto_publish_src: true
     flag_validation_fn: |
        setFlagValidationFunction((flag) => {
-         return flag.startsWith("PLFANZEN{") && flag.endsWith("}") && flag !== "PLFANZEN{TEST_SVC_2}";
+         return flag.startsWith("PLFANZY{") && flag.endsWith("}");
        });
-    ports:
-        8080:
-            protocol: HTTP

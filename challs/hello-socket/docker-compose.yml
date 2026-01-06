@@ -16,6 +16,3 @@ x-ctf-metadata:
         - Aaron
         - Plfanzen
     flag: PLFANZEN{TEST_SVC_2}
-    ports:
-        3000:
-            protocol: TCP

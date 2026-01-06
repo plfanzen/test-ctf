@@ -1,0 +1,14 @@
+x-ctf-metadata:
+    name: Hello rev
+    description_md: |
+        I lost the source code for this tool. Can you somehow figure out the password?
+    difficulty: "easy"
+    base_points: 100
+    categories:
+        - rev
+    authors:
+        - Aaron
+        - Plfanzen
+    flag: PLFANZEN{REVERSING}
+    attachments:
+      - chall

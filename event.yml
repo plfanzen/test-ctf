@@ -29,8 +29,8 @@ categories:
     name: msic
     description: "**various challenges** for you to solve"
     color: "#800080"
-  pwn:
-    name: pwn
+  rev:
+    name: rev
     color: green
 
 
