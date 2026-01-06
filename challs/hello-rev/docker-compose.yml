@@ -1,3 +1,5 @@
+services: {}
+
 x-ctf-metadata:
     name: Hello rev
     description_md: |
