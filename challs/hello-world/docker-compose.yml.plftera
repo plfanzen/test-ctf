@@ -1,8 +1,8 @@
 services:
     main:
-        build:
-            context: src
-            dockerfile: Dockerfile
+        #build:
+            #context: src
+            #dockerfile: Dockerfile
         image: traefik/whoami
         ports:
             - name: web
