@@ -15,11 +15,11 @@ services:
             FLAG: "PLFANZEN{TEST}"
             ACTOR: {{ actor }}
         volumes:
-            - data/subdir:/data
+            - data:/data
 
 volumes:
     data:
-        x-size: 10Mi
+        x-size: 50Mi
 
 x-ctf-metadata:
     name: "Hello World Challenge"
