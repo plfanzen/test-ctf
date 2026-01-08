@@ -1,0 +1,21 @@
+services:
+    main:
+        image: ghcr.io/plfanzen/demo-chal:main
+        ports:
+            - name: web
+              target: 22
+              protocol: tcp
+              app_protocol: ssh
+
+x-ctf-metadata:
+    name: SSH Test
+    description_md: |
+        Just testing SSH stuff.
+    difficulty: "easy"
+    base_points: 100
+    categories:
+        - misc
+    authors:
+        - Aaron
+        - Plfanzen
+    flag: PLFANZEN{TEST_SVC_2}
