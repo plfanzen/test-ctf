@@ -6,6 +6,8 @@ services:
               target: 22
               protocol: tcp
               app_protocol: ssh
+              x-username: plfanzen
+              x-password: plfanzy
 
 x-ctf-metadata:
     name: SSH Test
