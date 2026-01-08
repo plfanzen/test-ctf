@@ -18,4 +18,4 @@ x-ctf-metadata:
     authors:
         - Aaron
         - Plfanzen
-    flag: PLFANZEN{TEST_SVC_2}
+    flag: PLFANZEN{TEST_SSH}
