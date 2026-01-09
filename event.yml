@@ -16,7 +16,7 @@ use_teams: false
 
 points_fn: |
     setPointsFn((challengeMetadata, totalSolves, currentSolveIndex) => {
-      console.log(challengeMetadata, totalSolves, currentSolveIndex);
+      console.log(JSON.stringify(challengeMetadata), totalSolves, currentSolveIndex);
       const minPoints = 10;
       const maxPoints = 500;
   
