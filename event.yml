@@ -16,12 +16,14 @@ use_teams: false
 
 points_fn: |
     setPointsFn((challengeMetadata, totalSolves, currentSolveIndex) => {
-        // Ignore solveIndex
-        const minPoints = 10;
-        const maxPoints = 500;
-        const decayFactor = Math.log10(totalSolves + 1); // +1 to avoid log10(0)
-        const score = Math.max(minPoints, maxPoints - decayFactor * (maxPoints - minPoints) / 10);
-        return Math.floor(score);
+      const minPoints = 10;
+      const maxPoints = 500;
+  
+      const decayFactor = totalSolves > 1 ? Math.log10(totalSolves) : 0;
+      const score =
+          maxPoints - (decayFactor * (maxPoints - minPoints)) / 10;
+  
+      return Math.floor(Math.max(minPoints, score));
     })
 
 categories:
