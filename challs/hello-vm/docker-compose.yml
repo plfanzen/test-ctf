@@ -1,0 +1,29 @@
+services: {}
+
+x-ctf-vms:
+    main:
+      memory: 256Mi
+      cpu_cores: 1
+      disks:
+        - image: quay.io/kubevirt/cirros-container-disk-demo
+        - cloud_init_user_data_base64: SGkuXG4=
+      ports:
+        - name: web
+          target: 22
+          protocol: tcp
+          app_protocol: ssh
+          x-username: plfanzen
+          x-password: plfanzy
+
+x-ctf-metadata:
+    name: VM Test
+    description_md: |
+        Just testing VM stuff.
+    difficulty: "easy"
+    base_points: 100
+    categories:
+        - misc
+    authors:
+        - Aaron
+        - Plfanzen
+    flag: PLFANZEN{TEST_VM}
