@@ -6,14 +6,14 @@ x-ctf-vms:
       cpu_cores: 1
       disks:
         - image: quay.io/kubevirt/cirros-container-disk-demo
-        - cloud_init_user_data_base64: SGkuXG4=
+        - cloud_init_user_data_base64: IyEvYmluL3NoCmVjaG8gJ3ByaW50ZWQgZnJvbSBjbG91ZC1pbml0IHVzZXJkYXRhJwo=
       ports:
-        - name: web
+        - name: ssh
           target: 22
           protocol: tcp
           app_protocol: ssh
-          x-username: plfanzen
-          x-password: plfanzy
+          x-username: cirros
+          x-password: gocubsgo
 
 x-ctf-metadata:
     name: VM Test
